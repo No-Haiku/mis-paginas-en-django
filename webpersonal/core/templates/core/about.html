@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block title %} Acerca de {% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block headers%}
+      <h1>A cerca de mi</h1>
+      <span class="subheading"> Estudiante en la utn, desarrolardor web</span>
+{% endblock %}
+
+{% block content %}
+<div class="row"> 
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Gianfranco Neira</h2>   
+        <p>Nacido en Argentina provincia de Buenos Aires ciudad de Mar del plata</p>
+        <p>Actualmente me dedico a estudiar y desarrollar paginas web en back y frond</p>
+    </div>
+</div>
+{% endblock %}
