@@ -19,6 +19,8 @@ from django.conf import settings
 
 
 urlpatterns = [
+    #pages
+    path('page/', include('pages.urls')),
     #blog
     path('blog/', include('blog.urls')),
     #services
