@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'blog',
+    'ckeditor',
     'services.apps.ServicesConfig',
     'social.apps.SocialConfig',
     'pages.apps.PagesConfig',
@@ -127,3 +128,11 @@ STATIC_URL = '/static/'
 # Media files
 MEDIA_URL= '/media/'
 MEDIA_ROOT= BASE_DIR / 'media'
+
+# CkEditor
+'''CKEDITOR_CONFIGS={
+    'default':{
+        'toolbar':None,
+    }
+}'''
+

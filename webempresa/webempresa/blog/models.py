@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.timezone import now
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
+
 
 # Create your models here.
 class Category(models.Model):
@@ -19,7 +21,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title=models.CharField(max_length=100, verbose_name='Titulo')
-    context=models.TextField(verbose_name='Contenido', default=now)
+    context=RichTextField(verbose_name='Contenido', default=now)
     published=models.DateTimeField(verbose_name='Fecha de publicacion')
     image=models.ImageField(verbose_name='Imagen', upload_to="blog", null=True, blank=True)
     author=models.ForeignKey(User, verbose_name='Autor', on_delete=models.CASCADE)
