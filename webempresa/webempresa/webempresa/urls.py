@@ -19,6 +19,8 @@ from django.conf import settings
 
 
 urlpatterns = [
+    #contact
+    path('contact/', include('contact.urls')),
     #pages
     path('page/', include('pages.urls')),
     #blog
