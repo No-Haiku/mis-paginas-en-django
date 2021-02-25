@@ -20,6 +20,9 @@
             {% if 'ok' in request.GET %}
                 <p><b>Su mendaje se a enviado correctamente, en breve nos pondremos en contacto.</b></p>
             {% endif %}
+            {% if 'fail' in request.GET %}
+                <p><b>"ERROR" su mendaje no se a podido enviar.</b></p>
+            {% endif %}
             <form action="" method="POST">
                {% csrf_token %}
                 <div class="form-group">

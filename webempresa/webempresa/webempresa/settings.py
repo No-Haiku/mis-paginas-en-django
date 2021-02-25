@@ -137,3 +137,9 @@ MEDIA_ROOT= BASE_DIR / 'media'
     }
 }'''
 
+# Email Config
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '8426c2b69dffa3'
+EMAIL_HOST_PASSWORD = '7b39b58f1c6563'
+EMAIL_PORT = '2525'
