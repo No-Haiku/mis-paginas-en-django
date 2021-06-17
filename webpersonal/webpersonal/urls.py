@@ -20,12 +20,17 @@ from portfolio import views as portfolio_views
 
 from django.conf import settings
 
+from django.views.static import serve
+from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name='home'),
     path('about-me/', core_views.about, name='about'),
     path('portfolio/', portfolio_views.portfolio, name='portfolio'),
     path('contact/', core_views.contact, name='contact'),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
 
 if settings.DEBUG:
